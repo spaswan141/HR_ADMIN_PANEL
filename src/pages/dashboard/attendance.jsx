@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "./candidate.css";
 import DynamicTable from "../../components/table/table";
-import CustomSelect from "../../components/customSelect/CustomSelect";
+import CustomSelect from "../../components/CustomSelect/CustomSelect";
 import CustomSearch from "../../components/customSearch/customSearch";
 import api from "../../axios/axiosInterceptor";
 import { useDebounce } from "use-debounce";
