@@ -1,7 +1,7 @@
 import React from "react";
 import "./Table.css";
 import { FiMoreVertical } from "react-icons/fi";
-import CustomSelect from "../CustomSelect/CustomSelect";
+import CustomSelect from "./CustomSelect";
 import ActionMenu from "../actionMenu/ActionMenu";
 
 const DynamicTable = ({
