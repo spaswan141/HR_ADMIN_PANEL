@@ -1,8 +1,8 @@
 // EmployeeModal.jsx - Updated with React Hook Form
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import Modal from "../modalLayouts/Modal";
-import Input from "../modalLayouts/InputField";
+import Modal from "../Modal";
+import Input from "../InputField";
 import api from "../../axios/axiosInterceptor";
 
 const EmployeeModal = ({ open, onClose, employeeId, onSuccess }) => {

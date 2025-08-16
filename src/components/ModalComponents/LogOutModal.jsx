@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "../modalLayouts/Modal";
+import Modal from "../Modal";
 import useAuthStore from "../../store/authStore";
 
 const LogoutModal = ({ open, onClose }) => {

@@ -1,10 +1,10 @@
 // EmployeeModal.jsx - Updated with React Hook Form
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import Modal from "../modalLayouts/Modal";
-import Input from "../modalLayouts/InputField";
+import Modal from "../Modal";
+import Input from "../InputField";
 import api from "../../axios/axiosInterceptor";
-import SearchInput from "../modalLayouts/SearchInput";
+import SearchInput from "../SearchInput";
 import { toast } from "react-toastify";
 
 const LeaveModal = ({ open, onClose, employeeId, onSuccess }) => {
