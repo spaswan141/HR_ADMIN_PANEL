@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FiMoreVertical } from "react-icons/fi";
-import "./actionmenu.css"
+import "./ActionMenu.css"
 
 const ActionMenu = ({ actions, onActionClick }) => {
   const [open, setOpen] = useState(false);

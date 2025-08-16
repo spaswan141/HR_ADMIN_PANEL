@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
-import "./customselect.css";
+import "./CustomSelect.css";
 
 const CustomSelect = ({ label, value, options, onChange, condition='none' }) => {
   const [open, setOpen] = useState(false);

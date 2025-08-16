@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useController } from "react-hook-form";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import "./input.css";
+import "./Input.css";
 
 export default function InputField({
   label,

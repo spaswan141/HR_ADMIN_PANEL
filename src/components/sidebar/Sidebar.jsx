@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./sidebar.css";
+import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
 import CustomSearch from "../customSearch/customSearch";
 import LogoutModal from "../ModalComponents/LogOutModal";

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Search, X } from "lucide-react";
-import "./searchInput.css";
+import "./SearchInput.css";
 
 const SearchInput = ({
   label = "Search",

@@ -1,5 +1,5 @@
 import React from "react";
-import "./table.css";
+import "./Table.css";
 import { FiMoreVertical } from "react-icons/fi";
 import CustomSelect from "../customSelect/CustomSelect";
 import ActionMenu from "../actionMenu/ActionMenu";
