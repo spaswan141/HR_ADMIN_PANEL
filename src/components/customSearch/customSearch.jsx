@@ -1,6 +1,6 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
-import  "./customsearch.css"; // same style rules as select for consistency
+import  "./customSearch.css"; // same style rules as select for consistency
 
 const CustomSearch = ({ value, onChange, placeholder = "Search" }) => {
   return (
