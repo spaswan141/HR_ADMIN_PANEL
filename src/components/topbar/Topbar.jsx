@@ -3,6 +3,7 @@ import { IoMdMail } from "react-icons/io";
 import { IoChevronDown } from "react-icons/io5";
 import "./topbar.css";
 import { useState } from "react";
+import Avatar from "../../assets/profile.png"
 
 export default function Topbar({ title }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Topbar({ title }) {
         <div className="profile">
         </div><div className="profile" onClick={toggleDropdown}>
           <img
-            src="/src/assets/profile.png"
+            src={Avatar}
             alt="Profile"
             className="profile-img"
           />
