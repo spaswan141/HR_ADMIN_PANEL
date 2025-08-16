@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import "./candidate.css";
-import DynamicTable from "../../components/table/table";
-import CustomSelect from "../../components/CustomSelect/CustomSelect";
-import CustomSearch from "../../components/customSearch/customSearch";
-import CustomButton from "../../components/customButton/CustomButton";
+import DynamicTable from "../../components/Table";
+import CustomSelect from "../../components/CustomSelect";
+import CustomSearch from "../../components/CustomSearch";
+import CustomButton from "../../components/CustomButton";
 import EmployeeModal from "../../components/ModalComponents/EmployeeModal";
 import AddCandidateModal from "../../components/ModalComponents/CandidateModal";
 import api from "../../axios/axiosInterceptor";
