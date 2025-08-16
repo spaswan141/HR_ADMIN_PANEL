@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import "./candidate.css";
-import DynamicTable from "../../components/table/table";
-import CustomSelect from "../../components/CustomSelect/CustomSelect";
-import CustomSearch from "../../components/customSearch/customSearch";
+import DynamicTable from "../../components/Table";
+import CustomSelect from "../../components/CustomSelect";
+import CustomSearch from "../../components/CustomSearch";
 import api from "../../axios/axiosInterceptor";
 import { useDebounce } from "use-debounce";
 import EmployeeModal from "../../components/ModalComponents/EmployeeModal";
