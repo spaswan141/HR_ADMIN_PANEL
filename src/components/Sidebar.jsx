@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
-import CustomSearch from "../customSearch/customSearch";
-import LogoutModal from "../ModalComponents/LogOutModal";
+import CustomSearch from "./customSearch/customSearch";
+import LogoutModal from "./ModalComponents/LogOutModal";
 
 export default function Sidebar() {
   const [openLogoutModal, setOpenLogoutModal] = useState(false);

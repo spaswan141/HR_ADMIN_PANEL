@@ -1,8 +1,8 @@
 import React from "react";
 import "./LeaveTable.css";
 import { FiMoreVertical } from "react-icons/fi";
-import CustomSelect from "../CustomSelect/CustomSelect";
-import ActionMenu from "../actionMenu/ActionMenu";
+import CustomSelect from "./CustomSelect";
+import ActionMenu from "./ActionMenu";
 
 const LeaveTable = ({ columns, data, onActionClick, onSelectChange, title = "Applied Leaves" }) => {
   return (

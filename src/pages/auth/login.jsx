@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import api from '../../axios/axiosInterceptor';
 import useAuthStore from '../../store/authStore';
 import SideImage from "../../assets/dashboard.png"
-import Input from '../../components/Input/Input';
+import Input from '../../components/Input';
 // ✅ Form validation schema
 const schema = z.object({
   email: z

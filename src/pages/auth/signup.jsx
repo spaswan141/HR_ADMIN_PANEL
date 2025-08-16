@@ -8,7 +8,7 @@ import api from "../../axios/axiosInterceptor";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import SideImage from "../../assets/dashboard.png"
-import Input from '../../components/Input/Input';
+import Input from '../../components/Input';
 // Validation schema
 const schema = z
   .object({
