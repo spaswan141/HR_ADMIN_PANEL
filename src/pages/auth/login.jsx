@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import api from '../../axios/axiosInterceptor';
 import useAuthStore from '../../store/authStore';
-
+import SideImage from "../../assets/dashboard.png"
 // ✅ Form validation schema
 const schema = z.object({
   email: z
@@ -61,7 +61,7 @@ const Login = () => {
         {/* Left */}
         <div className="left-panel">
           <img
-            src="/src/assets/dashboard.png"
+           src={SideImage}
             alt="Dashboard Preview"
             className="dashboard-img"
           />

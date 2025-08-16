@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../../axios/axiosInterceptor";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
-
+import SideImage from "../../assets/dashboard.png"
 // Validation schema
 const schema = z
   .object({
@@ -77,7 +77,7 @@ const Signup = () => {
         {/* Left Section */}
         <div className="left-panel">
           <img
-            src="/src/assets/dashboard.png"
+            src={SideImage}
             alt="Dashboard Preview"
             className="dashboard-img"
           />
