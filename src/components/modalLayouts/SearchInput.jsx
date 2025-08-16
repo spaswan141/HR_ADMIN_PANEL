@@ -19,6 +19,7 @@ const SearchInput = ({
   const searchRef = useRef(null);
   const dropdownRef = useRef(null);
 
+  
   // Filter data based on search term
   useEffect(() => {
     if (searchTerm.trim() === "") {
