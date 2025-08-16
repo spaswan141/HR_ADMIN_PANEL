@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, User } from "lucide-react";
-import "./LeaveCalendar.css";
+import "./leaveCalendar.css";
 
 const LeaveCalendar = ({ leaves }) => {
   const [approvedLeaves, setApprovedLeaves] = useState([]);

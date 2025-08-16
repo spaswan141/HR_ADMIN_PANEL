@@ -1,5 +1,5 @@
 import React from "react";
-import "./LeaveTable.css";
+import "./leaveTable.css";
 import { FiMoreVertical } from "react-icons/fi";
 import CustomSelect from "../customSelect/CustomSelect";
 import ActionMenu from "../actionMenu/ActionMenu";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useController } from "react-hook-form";
 import { ChevronDown, ChevronUp, Eye, EyeOff, Upload } from "lucide-react";
-import "./Input.css";
+import "./input.css";
 
 const Input = ({
   label,
