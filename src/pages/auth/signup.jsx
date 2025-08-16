@@ -3,7 +3,7 @@ import "./signup.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import InputField from "../../components/inputField/Input";
+import InputField from "../../components/InputField/Input";
 import { useNavigate } from "react-router-dom";
 import api from "../../axios/axiosInterceptor";
 import { toast } from "react-toastify";
