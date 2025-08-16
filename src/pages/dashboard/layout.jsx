@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Topbar from "../../components/topbar/Topbar";
+import Sidebar from "../../components/Sidebar";
+import Topbar from "../../components/Topbar";
 import "./layout.css";
 import { useLocation } from "react-router-dom";
 
