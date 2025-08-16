@@ -1,0 +1,88 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input-group .required {
+  color: red;
+  margin-left: 2px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: #5c0fc5; /* highlight color */
+}
+
+.input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  background: transparent;
+}
+
+.input-wrapper input::placeholder {
+  color: #999;
+}
+
+.input-wrapper span {
+  font-size: 18px;
+  color: #5c0fc5;
+  cursor: pointer;
+}
+
+/* ---- Responsive Styles ---- */
+@media (max-width: 768px) {
+  .input-group label {
+    font-size: 13px;
+  }
+
+  .input-wrapper {
+    padding: 8px 10px;
+  }
+
+  .input-wrapper input {
+    font-size: 13px;
+  }
+
+  .input-wrapper span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-group label {
+    font-size: 12px;
+  }
+
+  .input-wrapper {
+    padding: 6px 8px;
+  }
+
+  .input-wrapper input {
+    font-size: 12px;
+  }
+
+  .input-wrapper span {
+    font-size: 15px;
+  }
+}

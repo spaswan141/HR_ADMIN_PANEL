@@ -1,0 +1,445 @@
+.input-container {
+  position: relative;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid #4d007d;
+  border-radius: 30px;
+  outline: none;
+  background-color: white;
+  color: #374151;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.input-field::placeholder {
+  color: #9ca3af;
+  transition: opacity 0.2s ease;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: transparent;
+  z-index: 5;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Show floating label on hover, focus, or when filled - FOR ALL INPUT TYPES */
+.input-container:hover .input-label,
+.input-field:focus ~ .input-label,
+.input-field:not(:placeholder-shown) ~ .input-label,
+.input-field.filled ~ .input-label {
+  opacity: 1;
+  visibility: visible;
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  color: #4d007d;
+  background-color: white;
+  padding: 0 6px;
+}
+
+/* Hide placeholder when label is showing */
+.input-container:hover .input-field::placeholder,
+.input-field:focus::placeholder {
+  opacity: 0;
+}
+
+.required {
+  color: #ef4444;
+  margin-left: 4px;
+}
+
+.input-field:focus,
+.input-field:hover {
+  border-color: #a855f7;
+}
+
+.input-select {
+  appearance: none;
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+.input-select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23a855f7' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.date-container {
+  position: relative;
+}
+
+.date-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #4d007d;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.input-field:focus + .date-icon {
+  color: #a855f7;
+}
+
+/* wrapper */
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* placeholder text */
+.placeholder {
+  color: #9ca3af;
+}
+
+/* arrow */
+.custom-select-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #4d007d;
+}
+
+/* change arrow color on focus */
+.input-field.input-select:focus + .custom-select-arrow {
+  color: #a855f7;
+}
+
+/* Show label for select - same as all other inputs (hover, focus, filled) */
+.custom-select-wrapper:hover .input-label,
+.custom-select-wrapper .input-field:focus ~ .input-label,
+.custom-select-wrapper .input-field:not(.placeholder) ~ .input-label {
+  opacity: 1;
+  visibility: visible;
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  color: #4d007d;
+  background-color: white;
+  padding: 0 6px;
+}
+
+/* options dropdown */
+.custom-select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.custom-select-options li {
+  padding: 12px 20px;
+  color: #121212;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.custom-select-options li:hover {
+  color: #a855f7;
+}
+
+.custom-select-options li.selected {
+  font-weight: 600;
+}
+
+/* Password container styles */
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #4d007d;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #a855f7;
+}
+
+/* Password label behavior - same as all other inputs (hover, focus, filled) */
+.password-container:hover .input-label,
+.password-container .input-field:focus ~ .input-label,
+.password-container .input-field:not(:placeholder-shown) ~ .input-label {
+  opacity: 1;
+  visibility: visible;
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  color: #4d007d;
+  background-color: white;
+  padding: 0 6px;
+}
+
+/* Date container hover/focus behavior */
+.date-container:hover .input-label,
+.date-container .input-field:focus ~ .input-label,
+.date-container .input-field:not(:placeholder-shown) ~ .input-label {
+  opacity: 1;
+  visibility: visible;
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  color: #4d007d;
+  background-color: white;
+  padding: 0 6px;
+}
+
+/* File input container */
+.file-container {
+  position: relative;
+}
+
+/* Hide default file input */
+.file-container input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Custom file input button */
+.file-input-display {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid #4d007d;
+  border-radius: 30px;
+  outline: none;
+  background-color: white;
+  color: #374151;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-input-display:hover,
+.file-container:focus-within .file-input-display {
+  border-color: #a855f7;
+}
+
+/* File input text */
+.file-input-text {
+  color: #9ca3af;
+  flex: 1;
+  text-align: left;
+}
+
+.file-input-text.has-file {
+  color: #374151;
+}
+
+/* File input icon */
+.file-input-icon {
+  width: 20px;
+  height: 20px;
+  color: #4d007d;
+  transition: color 0.2s ease;
+}
+
+.file-container:hover .file-input-icon,
+.file-container:focus-within .file-input-icon {
+  color: #a855f7;
+}
+
+/* File input hover/focus behavior - same as all other inputs */
+.file-container:hover .input-label,
+.file-container:focus-within .input-label,
+.file-container.has-file .input-label {
+  opacity: 1;
+  visibility: visible;
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  color: #4d007d;
+  background-color: white;
+  padding: 0 6px;
+}
+
+/* Error message */
+.error-message {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #ef4444;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* Helper text */
+.helper-text {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .input-container {
+    margin-bottom: 16px;
+  }
+
+  .input-field,
+  .file-input-display {
+    padding: 16px;
+    font-size: 15px;
+    border-radius: 25px;
+  }
+
+  .input-label {
+    left: 16px;
+    font-size: 13px;
+  }
+
+  .input-container:hover .input-label,
+  .input-field:focus ~ .input-label,
+  .input-field:not(:placeholder-shown) ~ .input-label,
+  .input-field.filled ~ .input-label,
+  .custom-select-wrapper:hover .input-label,
+  .custom-select-wrapper .input-field:focus ~ .input-label,
+  .custom-select-wrapper .input-field:not(.placeholder) ~ .input-label,
+  .password-container:hover .input-label,
+  .password-container .input-field:focus ~ .input-label,
+  .password-container .input-field:not(:placeholder-shown) ~ .input-label,
+  .date-container:hover .input-label,
+  .date-container .input-field:focus ~ .input-label,
+  .date-container .input-field:not(:placeholder-shown) ~ .input-label,
+  .file-container:hover .input-label,
+  .file-container:focus-within .input-label,
+  .file-container.has-file .input-label {
+    top: -8px;
+    left: 16px;
+    font-size: 12px;
+    padding: 0 4px;
+  }
+
+  .custom-select-arrow,
+  .date-icon,
+  .password-toggle,
+  .file-input-icon {
+    right: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .custom-select-options {
+    border-radius: 8px;
+    margin-top: 6px;
+    max-height: 180px;
+  }
+
+  .custom-select-options li {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-field,
+  .file-input-display {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  .input-label {
+    left: 14px;
+    font-size: 12px;
+  }
+
+  .input-container:hover .input-label,
+  .input-field:focus ~ .input-label,
+  .input-field:not(:placeholder-shown) ~ .input-label,
+  .input-field.filled ~ .input-label,
+  .custom-select-wrapper:hover .input-label,
+  .custom-select-wrapper .input-field:focus ~ .input-label,
+  .custom-select-wrapper .input-field:not(.placeholder) ~ .input-label,
+  .password-container:hover .input-label,
+  .password-container .input-field:focus ~ .input-label,
+  .password-container .input-field:not(:placeholder-shown) ~ .input-label,
+  .date-container:hover .input-label,
+  .date-container .input-field:focus ~ .input-label,
+  .date-container .input-field:not(:placeholder-shown) ~ .input-label,
+  .file-container:hover .input-label,
+  .file-container:focus-within .input-label,
+  .file-container.has-file .input-label {
+    top: -7px;
+    left: 14px;
+    font-size: 11px;
+    padding: 0 3px;
+  }
+
+  .custom-select-arrow,
+  .date-icon,
+  .password-toggle,
+  .file-input-icon {
+    right: 14px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .custom-select-options {
+    border-radius: 6px;
+    margin-top: 4px;
+    max-height: 160px;
+  }
+
+  .custom-select-options li {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .error-message,
+  .helper-text {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+}

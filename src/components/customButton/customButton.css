@@ -1,0 +1,23 @@
+/* BUTTON */
+.custom-btn {
+  border: 1px solid #ddd; /* match select border */
+  border-radius: 999px;
+  padding: 6px 16px; /* match select padding */
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  height: 36px; /* fixed height to match select */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.custom-btn.primary {
+  background-color: #5b2c8e; /* match your Add Candidate */
+  color: white;
+  border: none; /* optional: remove border for colored buttons */
+}
+
+.custom-btn.primary:hover {
+  background-color: #4a2375;
+}

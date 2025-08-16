@@ -1,0 +1,365 @@
+.table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow: visible; /* Keep this as visible */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* New header styles */
+.table-header {
+  background: #4b0082;
+  padding: 16px 20px;
+}
+
+.table-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  z-index: 2;
+}
+
+.candidate-table thead tr {
+  background-color: #4b0082;
+  color: white;
+}
+
+.candidate-table thead th {
+  padding: 12px 16px;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.candidate-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+  position: relative;
+  /* Remove overflow hidden from table cells */
+  overflow: visible;
+}
+
+.candidate-table,
+.candidate-table tbody,
+.candidate-table td {
+  overflow: visible !important;
+}
+
+.candidate-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.candidate-table select {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+  color: #333;
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+}
+
+.candidate-table select option {
+  background-color: white;
+  color: #333;
+  padding: 10px;
+  font-weight: 400;
+  text-align: left;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.doc-icon:hover path {
+  stroke: #4d007d;
+}
+
+/* Fixed Custom Select Styles */
+.custom-select {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  z-index: 1000; /* Increased base z-index */
+}
+
+.select-trigger {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+  position: relative;
+  z-index: 1001; /* Higher than container */
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.select-options {
+  min-width: 100%;
+  width: max-content;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: white;
+  border: 1px solid #ddd; /* Add border to match trigger */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  overflow: hidden;
+  z-index: 9999; /* Very high z-index */
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.option {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.option:hover {
+  background: #f5f5f5;
+}
+
+.option.selected {
+  background: #f0f0f0;
+  font-weight: 500;
+}
+
+/* Ensure dropdowns appear above table content */
+.candidate-table tbody tr {
+  position: relative;
+  z-index: 1;
+}
+
+/* When dropdown is open, increase z-index of the row */
+.candidate-table tbody tr:has(.custom-select .select-options) {
+  z-index: 1002;
+}
+
+/* Alternative approach if :has() is not supported */
+.dropdown-open {
+  z-index: 1002 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .table-wrapper {
+    overflow-x: auto;
+    overflow-y: visible; /* Allow vertical overflow for dropdowns */
+    border-radius: 6px;
+    min-height: 180px;
+  }
+
+  .candidate-table {
+    min-width: 700px;
+  }
+
+  .table-header {
+    padding: 14px 16px;
+  }
+
+  .table-title {
+    font-size: 16px;
+  }
+
+  .candidate-table thead th,
+  .candidate-table tbody td {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .candidate-table select {
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 16px;
+    padding-right: 28px;
+    background-size: 11px;
+  }
+
+  .candidate-table select option {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .custom-select .select-trigger {
+    padding: 5px 12px;
+    font-size: 13px;
+    min-width: 100px;
+  }
+
+  .select-options {
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+    overflow-y: visible; /* Allow vertical overflow for dropdowns */
+    margin: 0 8px;
+    min-height: 160px;
+  }
+
+  .candidate-table {
+    min-width: 600px;
+  }
+
+  .table-header {
+    padding: 12px 14px;
+  }
+
+  .table-title {
+    font-size: 15px;
+  }
+
+  .candidate-table thead th,
+  .candidate-table tbody td {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .candidate-table select {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 14px;
+    padding-right: 26px;
+    background-size: 10px;
+  }
+
+  .candidate-table select option {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .custom-select .select-trigger {
+    padding: 4px 10px;
+    font-size: 12px;
+    min-width: 90px;
+  }
+
+  .select-options {
+    max-height: 160px;
+  }
+
+  .candidate-table img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .doc-icon {
+    width: 12px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-wrapper {
+    margin: 0 4px;
+    border-radius: 4px;
+    min-height: 140px;
+    overflow-x: auto;
+    overflow-y: visible; /* Allow vertical overflow for dropdowns */
+  }
+
+  .candidate-table {
+    min-width: 500px;
+  }
+
+  .table-header {
+    padding: 10px 12px;
+  }
+
+  .table-title {
+    font-size: 14px;
+  }
+
+  .candidate-table thead th,
+  .candidate-table tbody td {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .candidate-table select {
+    padding: 3px 6px;
+    font-size: 11px;
+    border-radius: 12px;
+    padding-right: 24px;
+    background-size: 9px;
+  }
+
+  .candidate-table select option {
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  .custom-select .select-trigger {
+    padding: 3px 8px;
+    font-size: 11px;
+    min-width: 80px;
+  }
+
+  .select-options {
+    max-height: 140px;
+  }
+
+  .candidate-table img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .doc-icon {
+    width: 10px;
+    height: 14px;
+  }
+
+  .candidate-table tbody td:empty::after {
+    content: "-";
+    color: #999;
+  }
+}

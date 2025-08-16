@@ -1,0 +1,14 @@
+.main-container{
+    padding: auto;
+}
+header{
+
+width: 1120px;
+height: 38px;
+top: 92px;
+left: 300px;
+justify-content: space-between;
+}
+.table-container{
+    padding: 0 8px;
+}

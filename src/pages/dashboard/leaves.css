@@ -1,0 +1,148 @@
+/* Main Container Styles */
+.main-container {
+  width: 100%;
+  padding: 16px;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 38px;
+  justify-content: space-between;
+}
+
+.left-div,
+.right-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Divider between left & right, not on the far left */
+.divider {
+  width: 1px;
+  height: 32px;
+  border-left: 1px dashed #4D007D; /* blue dashed */
+  margin: 0 20px;
+}
+
+/* Table Container - Responsive Layout */
+.table-container {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Table wrapper to control table width */
+.table-wrapper {
+  flex: 1;
+  min-width: 0; /* Allow table to shrink */
+  overflow-x: auto; /* Handle table overflow on small screens */
+}
+
+/* Calendar wrapper */
+.calendar-wrapper {
+  flex-shrink: 0;
+  width: 384px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .table-container {
+    gap: 12px;
+  }
+  
+  .calendar-wrapper {
+    width: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-container {
+    gap: 10px;
+  }
+  
+  .calendar-wrapper {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 12px;
+  }
+  
+  .table-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .calendar-wrapper {
+    width: 100%;
+    order: 2; /* Calendar appears after table on mobile */
+  }
+  
+  header {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .left-div,
+  .right-div {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 8px;
+  }
+  
+  header {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .left-div,
+  .right-div {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .table-container {
+    gap: 12px;
+  }
+}
+
+/* Table specific responsive styles */
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Utility classes for better responsive behavior */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+}

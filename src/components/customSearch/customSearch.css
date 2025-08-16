@@ -1,0 +1,29 @@
+/* Common style for all controls */
+.custom-select .select-trigger,
+.custom-search,
+.custom-btn {
+  height: 36px; /* fixed height for perfect alignment */
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 14px;
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+/* Match borders */
+.custom-select .select-trigger,
+.custom-search,
+.custom-btn {
+  border: 1px solid #ddd;
+}
+
+/* Search input specifics */
+.custom-search input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  width: 150px;
+}
+
