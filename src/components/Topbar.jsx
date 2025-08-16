@@ -3,7 +3,7 @@ import { IoMdMail } from "react-icons/io";
 import { IoChevronDown } from "react-icons/io5";
 import "./topbar.css";
 import { useState } from "react";
-import Avatar from "../../assets/profile.png"
+import Avatar from "../assets/profile.png"
 
 export default function Topbar({ title }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
