@@ -3,7 +3,7 @@ import { useController } from "react-hook-form";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import "./Input.css";
 
-export default function InputField({
+export default function Input({
   label,
   placeholder,
   type = "text",

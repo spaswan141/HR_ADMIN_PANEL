@@ -3,12 +3,12 @@ import "./signup.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import InputField from "../../components/InputField/Input.jsx";
 import { useNavigate } from "react-router-dom";
 import api from "../../axios/axiosInterceptor";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import SideImage from "../../assets/dashboard.png"
+import Input from '../../components/Input/Input';
 // Validation schema
 const schema = z
   .object({
@@ -99,21 +99,21 @@ const Signup = () => {
         <div className="right-panel">
           <h2>Welcome to Dashboard</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <InputField
+            <Input
               label="Full Name"
               placeholder="Full Name"
               name="fullName"
               control={control}
               required
             />
-            <InputField
+            <Input
               label="Email"
               placeholder="Email"
               name="email"
               control={control}
               required
             />
-            <InputField
+            <Input
               type="password"
               label="Password"
               placeholder="Password"
@@ -121,7 +121,7 @@ const Signup = () => {
               control={control}
               required
             />
-            <InputField
+            <Input
               type="password"
               label="Confirm Password"
               placeholder="Confirm Password"

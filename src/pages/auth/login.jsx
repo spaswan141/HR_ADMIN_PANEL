@@ -3,12 +3,12 @@ import './signup.css';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import InputField from '../../components/InputField/Input.jsx';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import api from '../../axios/axiosInterceptor';
 import useAuthStore from '../../store/authStore';
 import SideImage from "../../assets/dashboard.png"
+import Input from '../../components/Input/Input';
 // ✅ Form validation schema
 const schema = z.object({
   email: z
@@ -85,7 +85,7 @@ const Login = () => {
         <div className="right-panel">
           <h2>Welcome to Dashboard</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <InputField
+            <Input
               label="Email"
               placeholder="Email"
               name="email"
@@ -93,7 +93,7 @@ const Login = () => {
               rules={{ required: 'Email is required' }}
               required
             />
-            <InputField
+            <Input
               type="password"
               label="Password"
               placeholder="Password"
