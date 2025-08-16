@@ -2,18 +2,14 @@
 
 import { useEffect, useState } from "react";
 import "./leaves.css";
-import DynamicTable from "../../components/table/table";
-import CustomSelect from "../../components/CustomSelect/CustomSelect";
-import CustomSearch from "../../components/customSearch/customSearch";
-import CustomButton from "../../components/customButton/CustomButton";
-import EmployeeModal from "../../components/ModalComponents/EmployeeModal";
-import AddCandidateModal from "../../components/ModalComponents/CandidateModal";
 import api from "../../axios/axiosInterceptor";
 import { useDebounce } from "use-debounce";
 import { TbWashDryP } from "react-icons/tb";
 import { toast } from "react-toastify";
 import LeaveModal from "../../components/ModalComponents/LeaveModal";
-import LeaveCalendar from "../../components/leaveCalendar/LeaveCalendar";
+import LeaveCalendar from "../../components/LeaveCalendar";
+import DynamicTable from "../../components/Table";
+import CustomSelect from "../../components/CustomSelect";
 
 export default function Leaves() {
   const [search, setSearch] = useState("");
