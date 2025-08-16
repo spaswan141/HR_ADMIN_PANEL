@@ -10,7 +10,8 @@ import LeaveModal from "../../components/ModalComponents/LeaveModal";
 import LeaveCalendar from "../../components/LeaveCalendar";
 import DynamicTable from "../../components/Table";
 import CustomSelect from "../../components/CustomSelect";
-
+import CustomSearch from "../../components/CustomSearch"
+import CustomButton from "../../components/CustomButton"
 export default function Leaves() {
   const [search, setSearch] = useState("");
   const [debouncedSearch] = useDebounce(search, 500);

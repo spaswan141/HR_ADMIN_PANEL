@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 import api from "../../axios/axiosInterceptor";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
-import SideImage from "../../assets/dashboard.png"
-import Input from '../../components/Input';
+import SideImage from "../../assets/dashboard.png";
+import Input from "../../components/Input";
 // Validation schema
 const schema = z
   .object({
@@ -37,7 +37,12 @@ const schema = z
 const Signup = () => {
   const navigate = useNavigate();
 
-  const { control, handleSubmit, reset,formState: { isValid } } = useForm({
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { isValid },
+  } = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
       fullName: "",
@@ -52,12 +57,10 @@ const Signup = () => {
       console.log("Form Data:", data);
       const response = await api.post("/auth/register", data);
 
-      if (response.status === 200) {
-        toast.success("User registered successfully");
-
-
-        reset();
-        // navigate("/login");
+      if (response.status === 201) {
+        toast.success("User registered successfully"); // ✅ Shows success toast
+        reset(); // ✅ Clears the form fields
+        navigate("/login"); // ✅ Redirects user to login page
       }
     } catch (err) {
       console.error("Registration error:", err);
@@ -82,11 +85,13 @@ const Signup = () => {
             className="dashboard-img"
           />
           <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod
           </h2>
           <p>
             Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
           </p>
           <div className="dots">
             <span></span>
@@ -130,7 +135,10 @@ const Signup = () => {
               required
             />
 
-           <button  type="submit" className={`register-btn ${!isValid && 'disable_class'}`}>
+            <button
+              type="submit"
+              className={`register-btn ${!isValid && "disable_class"}`}
+            >
               Register
             </button>
           </form>

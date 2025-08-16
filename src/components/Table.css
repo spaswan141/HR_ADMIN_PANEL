@@ -97,13 +97,6 @@
   padding: 8px;
 }
 
-.action-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
 .doc-icon:hover path {
   stroke: #4d007d;
 }
@@ -182,9 +175,115 @@
   z-index: 1002;
 }
 
+/* When action menu is open, increase z-index of the row */
+.candidate-table tbody tr:has(.action-menu .menu-options) {
+  z-index: 1002;
+}
+
 /* Alternative approach if :has() is not supported */
 .dropdown-open {
   z-index: 1002 !important;
+}
+
+/* Action Menu Styles */
+.action-menu {
+  position: relative;
+  z-index: 1000;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  position: relative;
+  z-index: 1001;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Action Menu Dropdown */
+.menu-options {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0; /* Align to the right edge of the button */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 9999;
+  min-width: 150px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* For action menus near the right edge, position to the left */
+.menu-options.align-left {
+  right: auto;
+  left: 0;
+}
+
+.menu-option {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-option:last-child {
+  border-bottom: none;
+}
+
+.menu-option:hover {
+  background: #f5f5f5;
+}
+
+.menu-option.danger {
+  color: #dc3545;
+}
+
+.menu-option.danger:hover {
+  background: #fff5f5;
+}
+
+/* Icon styles within menu options */
+.menu-option svg,
+.menu-option .icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Action Menu Mobile Responsive */
+@media (max-width: 768px) {
+  .menu-options {
+    min-width: 120px;
+    font-size: 13px;
+  }
+  
+  .menu-option {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-options {
+    min-width: 100px;
+    font-size: 12px;
+  }
+  
+  .menu-option {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 
 /* Mobile Responsive */
