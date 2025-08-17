@@ -165,7 +165,7 @@ export default function Leaves() {
             condition={status}
             label="Status"
             value={status}
-            options={["Schedule", "Ongoing", "Selected", "Rejected"]}
+            options={["Pending", "Approve", "Reject"]}
             onChange={(value) => {
               setStatus(value);
             }}

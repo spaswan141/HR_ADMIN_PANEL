@@ -101,7 +101,7 @@ const LeaveModal = ({ open, onClose, employeeId, onSuccess }) => {
   };
   const fetchEmployees = async () => {
     try {
-      const response = await api.get(`/employee`);
+      const response = await api.get(`/employee/present`);
       if (response.status == 200) {
         let result = response.data.data.map((item) => {
           return {
